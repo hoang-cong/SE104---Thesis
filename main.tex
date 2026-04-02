@@ -1,38 +1,111 @@
 \documentclass[12pt]{report}
 
 \usepackage{graphicx}
-\usepackage[utf8]{vietnam}
+\usepackage[utf8]{inputenc}
 \usepackage[vietnamese]{babel}
+\usepackage{titlesec}
+\usepackage[a4paper, 
+            left=2cm, 
+            right=2cm, 
+            top=2cm, 
+            bottom=2cm]{geometry}
+\usepackage{tocloft}
+
+% Indent subsections slightly more than sections for a hierarchy look
+\cftsetindents{section}{1.5em}{3.5em}
+\cftsetindents{subsection}{3.0em}{4.5em}
+
+\renewcommand{\cftchapfont}{\bfseries\Large}
+% 1. Make Section entries in TOC bold and Large
+\renewcommand{\cftsecfont}{\bfseries\Large} 
+% 2. Make Subsection entries in TOC bold and large (slightly smaller than section)
+\renewcommand{\cftsubsecfont}{\bfseries\Large}
+
+% Optional: Adjust the page number sizes to match
+\renewcommand{\cftchappagefont}{\bfseries\Large}
+\renewcommand{\cftsecpagefont}{\bfseries\Large}
+\renewcommand{\cftsubsecpagefont}{\bfseries\Large}
+
+% Optional: Adjust spacing between entries so they don't look crowded
+\setlength{\cftbeforesecskip}{10pt}
+\setlength{\cftbeforesubsecskip}{5pt}
+
+\titleformat{\chapter}[hang] 
+    {\normalfont\huge\bfseries}{\thechapter.}{1em}{}
+\titlespacing*{\chapter}{0pt}{-10pt}{20pt}
+
+\titleformat{\section}
+    {\normalfont\large\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{15pt}{20pt}
+
+\titleformat{\subsection}
+    {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{5pt}
 
 \begin{document}
 
 \begin{titlepage}
     \centering
-    \vspace*{1cm}
-    
-    \Huge
-    \textbf{The Impact of Quantum Computing on Cryptography}
-    
-    \vspace{0.5cm}
-    \LARGE
-    Sub-title or Series Name
-    
-    \vspace{1.5cm}
-    
-    \textbf{Author Name}
-    
-    \vfill
-    
+
     \Large
-    Department of Physics\\
-    University of LaTeX\\
+    Đại học Quốc gia TP HCM \\
+    Trường Đại học Công nghệ thông tin \\
     \date{2026}
     
     \vspace{0.8cm}
     
     % \includegraphics[width=0.4\textwidth]{university_logo.png}
+
+    \vfill
+    \vspace*{1cm}
+    \Huge
+    \textbf{Đề tài Quản lý nhà sách}
     
+    \vspace{0.5cm}
+    \LARGE
+    Sub-title or Series Name
+    
+    \vfill
+    \vspace{1.5cm}
+    \textbf{Nhóm sinh viên thực hiện} \\
+    Sinh viên 1 - MSSV1 \\
+    Sinh viên 2 - MSSV2 \\
+    Sinh viên 3 - MSSV3 \\
+
 \end{titlepage}
 
-\section*{Table of content}
+\chapter*{Lời nói đầu}
+\pagebreak
+
+\tableofcontents
+\pagebreak
+
+\chapter{Hệ thống các yêu cầu phần mềm}
+    \section{Danh sách các yêu cầu nghiệp vụ}
+        Phần thêm/chỉnh sửa thông tin
+    \section{Bảng trách nhiệm yêu cầu nghiệp vụ}
+        Phần thêm/chỉnh sửa thông tin
+    \section{Danh sách các yêu cầu chất lượng}
+        \subsection{Yêu cầu tiến hóa}
+            Phần thêm/chỉnh sửa thông tin
+        \subsection{Yêu cầu hiệu quả}
+            Phần thêm/chỉnh sửa thông tin
+        \subsection{Yêu cầu tiện dụng}
+            Phần thêm/chỉnh sửa thông tin
+    \section{Danh sách các yêu cầu hệ thống}
+        \subsection{Yêu cầu tương thích}
+            Phần thêm/chỉnh sửa thông tin
+        \subsection{Yêu cầu bảo mật}
+            Phần thêm/chỉnh sửa thông tin
+        \subsection{Yêu cầu an toàn}
+            Phần thêm/chỉnh sửa thông tin
+    \section{Danh sách các yêu cầu công nghệ}
+        Phần thêm/chỉnh sửa thông tin
+\chapter{Phân tích xử lý dữ liệu}
+    Phần thêm/chỉnh sửa thông tin
+\chapter{Thiết kế dữ liệu}
+    Phần thêm/chỉnh sửa thông tin
+\chapter{Thiết kế giao diện}
+    Phần thêm/chỉnh sửa thông tin
+
 \end{document}
